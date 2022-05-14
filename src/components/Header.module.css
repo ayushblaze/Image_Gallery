@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+*{
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.headdiv {
+  margin-top: 3%;
+  margin-bottom: 4%;
+}
+
+.logo {
+  font-family: 'Pattaya', sans-serif;
+  font-size: 1.5rem;
+  display: block;
+  background-color: white;
+  height: 15%;
+  /* position: relative; */
+}
+
+.logotext {
+  /* position: absolute; */
+  top: 1rem;
+  left: 7rem;
+}
+
+.header {
+  box-sizing: border-box;
+  height: 70vh;
+  background-image: url(../img/bg.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading-primary {
+  display: block;
+  font-size: 1.5rem;
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  letter-spacing: -2%;
+  margin-bottom: 1rem;
+}
+
+.heading-sub {
+  display: block;
+  color: #C4C4C4;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+
