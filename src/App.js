@@ -10,6 +10,7 @@ const App = () => {
   const [formData, setFormData] = useState("");
 
   const fetchData = async (input) => {
+    // console.log("formData: ", formData);
     setLoading(true);
     const response = await axios.get(`https://api.unsplash.com/search/photos?page=1&query=${input}&client_id=OwGwmgc_mNfchveYWrNvoVnxu2cWIT6amYKA07v8L9Y&per_page=20`);
     const data = await response.data;
@@ -24,14 +25,15 @@ const App = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    console.log("formData", formData);
     fetchData(formData);
   }
 
   useEffect(() => {
+    console.log("FormData: ", formData);
     const identifier = setTimeout(() => {
-      fetchData();
+      fetchData(formData);
     }, 500);
-
 
     return () => {
       console.log("Cleanup function ran!");
@@ -49,7 +51,6 @@ const App = () => {
   return (
     <div>
       <Header change={formChangeHandler} submit={submitHandler}/>
-      {/* <Input change={formChangeHandler} submit={submitHandler} /> */}
       <Gallery photos={photos.results}/>
     </div>
   );
